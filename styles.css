@@ -1,0 +1,93 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.main-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+}
+
+.content-container {
+    text-align: center;
+}
+
+.input-container {
+    margin-bottom: 20px;
+}
+
+.label-cantidad,
+.label-paises {
+    margin-bottom: 10px;
+    display: block;
+}
+
+#cantidad {
+    padding: 8px;
+}
+
+.botones-paises {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.boton-pais {
+    padding: 8px;
+    background-color: #3498db; /* Azul */
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.boton-pais.active {
+    background-color: #2980b9; /* Azul más oscuro */
+}
+
+button {
+    padding: 8px 16px;
+    background-color: #2ecc71; /* Verde */
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #27ae60; /* Verde más oscuro */
+}
+
+.resultados {
+    display: none;
+    margin-top: 20px;
+}
+
+#tablaResultados {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#tablaResultados th, #tablaResultados td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+#tablaResultados th {
+    background-color: #34495e; /* Azul oscuro */
+    color: #fff;
+}
+
+#grafico-container {
+    flex: 1;
+    margin-left: 20px;
+    max-width: 400px;
+}
+
+#grafico {
+    width: 100%;
+    height: auto;
+}

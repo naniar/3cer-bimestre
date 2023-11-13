@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cambio de Moneda</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="main-container">
+        <div class="content-container">
+            <h1>Cambio de Moneda</h1>
+
+            <div class="input-container">
+                <label class="label-cantidad" for="cantidad">Cantidad:</label>
+                <input type="number" id="cantidad" min="0" placeholder="Ingrese la cantidad">
+                
+                <div class="paises-container">
+                    <p class="label-paises">Seleccione la moneda base:</p>
+                    <div class="botones-paises" onclick="seleccionarMoneda(event)">
+                        <button class="boton-pais" data-moneda="USD">USD</button>
+                        <button class="boton-pais" data-moneda="EUR">EUR</button>
+                        <button class="boton-pais" data-moneda="GBP">GBP</button>
+                        <button class="boton-pais" data-moneda="JPY">JPY</button>
+                        <button class="boton-pais" data-moneda="MXN">MXN</button>
+                        <!-- Eliminé la opción KRW e IDR -->
+                    </div>
+                </div>
+
+                <button onclick="calcularCambio()">Calcular</button>
+            </div>
+
+            <div class="resultados" id="resultados-container">
+                <h2>Resultados:</h2>
+                <table id="tablaResultados">
+                    <thead>
+                        <tr>
+                            <th>País</th>
+                            <th>Valor Cambiado</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="grafico-container" id="grafico-container">
+            <canvas id="grafico" width="400" height="400"></canvas>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
